@@ -1,4 +1,6 @@
-﻿{
+﻿# Linux/Mac/WSL
+cat > package.json << 'EOF'
+{
   "name": "resta-um-game",
   "version": "1.0.0",
   "description": "Jogo de Resta Um com CI/CD e interface web",
@@ -9,12 +11,7 @@
     "lint": "eslint .",
     "start": "node server.js"
   },
-  "keywords": [
-    "game",
-    "resta-um",
-    "cicd",
-    "docker"
-  ],
+  "keywords": ["game", "resta-um", "cicd", "docker"],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -25,3 +22,4 @@
     "eslint": "^8.56.0"
   }
 }
+EOF
