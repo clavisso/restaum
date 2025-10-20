@@ -1,0 +1,70 @@
+﻿version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: production
+    image: resta-um:latest
+    container_name: resta-um-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - app-network
+    command: npm start
+
+  test:
+    build:
+      context: .
+      target: development
+    image: resta-um:dev
+    container_name: resta-um-test
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm test
+    environment:
+      - NODE_ENV=test
+    networks:
+      - app-network
+
+  coverage:
+    build:
+      context: .
+      target: development
+    image: resta-um:dev
+    container_name: resta-um-coverage
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run test:coverage
+    environment:
+      - NODE_ENV=test
+    networks:
+      - app-network
+
+  lint:
+    build:
+      context: .
+      target: development
+    image: resta-um:dev
+    container_name: resta-um-lint
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run lint
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  node_modules:

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Resta Um</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resta Um</h1>
+            <p class="subtitle">Objetivo: deixar apenas uma peça no tabuleiro</p>
+        </header>
+
+        <div class="game-info">
+            <div class="info-box">
+                <span class="label">Peças restantes:</span>
+                <span id="pieces-count" class="value">32</span>
+            </div>
+            <div class="info-box">
+                <span class="label">Movimentos:</span>
+                <span id="moves-count" class="value">0</span>
+            </div>
+        </div>
+
+        <div id="board" class="board"></div>
+
+        <div class="controls">
+            <button id="reset-btn" class="btn btn-primary">Reiniciar Jogo</button>
+            <button id="hint-btn" class="btn btn-secondary">Dica</button>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="instructions">
+            <h3>Como Jogar</h3>
+            <ul>
+                <li>Clique em uma peça para selecioná-la</li>
+                <li>Clique em um espaço vazio válido para mover</li>
+                <li>Você deve pular sobre uma peça adjacente</li>
+                <li>A peça pulada é removida do tabuleiro</li>
+                <li>Vença deixando apenas uma peça no centro</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
