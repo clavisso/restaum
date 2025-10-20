@@ -1,4 +1,4 @@
-# Manual - Jogo Resta Um com CI/CD
+﻿# Manual - Jogo Resta Um com CI/CD
 
 Manual simplificado focado em execução do projeto e conceitos de CI/CD.
 
@@ -278,6 +278,7 @@ resta-um-game/
 ├── server.js                 # Servidor HTTP
 │
 ├── package.json              # Dependências do projeto
+├── jest.config.js            # Configuração do Jest
 ├── Dockerfile                # Como criar imagem Docker
 ├── docker-compose.yml        # Como executar containers
 │
@@ -532,3 +533,7 @@ Arquivo gerado durante o pipeline (ex: relatório de cobertura).
 4. Verificar logs
 5. Badge mostra status
 ```
+
+---
+
+Este manual cobre o essencial para usar o projeto e entender CI/CD na prática.

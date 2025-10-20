@@ -36,8 +36,6 @@ docker compose build
 
 - README.md - Este arquivo (visão geral)
 - MANUAL.md - Manual completo com todos os comandos e conceitos
-- QUICKSTART.md - Guia rápido de início
-- ESTRUTURA.md - Detalhes da estrutura de arquivos
 
 ## Estrutura
 
